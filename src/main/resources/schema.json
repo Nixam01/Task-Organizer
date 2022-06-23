@@ -1,0 +1,44 @@
+{
+  "title": "Tasks List",
+  "description": "The list of the tasks saved during program execution",
+  "type": "array",
+  "items": {
+      "type": "object",
+        "properties": {
+          "deadline": {
+            "description": "Time to deadline of the task (in milliseconds)",
+            "type": "number"
+          },
+          "description": {
+            "description": "Description of the task",
+            "type": "string",
+            "pattern": "[a-zA-Z0-9\\-_ąćęłńóśźżĄĆĘŁŃÓŚŹŻ ]"
+          },
+          "name": {
+            "description": "Name of the task",
+            "type": "string",
+            "pattern": "[a-zA-Z0-9\\-_ąćęłńóśźżĄĆĘŁŃÓŚŹŻ ]"
+          },
+          "internalPriority": {
+            "description": "The price of the product",
+            "type": "number"
+          },
+          "userPriority": {
+            "description": "User priority value",
+            "type": "integer"
+          },
+          "wasDeadlineSent" : {
+            "description": "Information about sending notification in the past",
+            "type": "boolean"
+          }
+    },
+    "required": [
+      "deadline",
+      "id",
+      "name",
+      "userPriority",
+      "internalPriority",
+      "wasDeadlineSent"
+    ]
+}
+}
